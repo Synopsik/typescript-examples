@@ -1,7 +1,3 @@
-const message = "Hello, world!";
+import { example } from "./examples";
 
-message.toLowerCase();
-
-// message();
-
-
+example();
