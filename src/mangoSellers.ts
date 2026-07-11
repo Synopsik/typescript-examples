@@ -4,27 +4,28 @@ import { Queue } from "../util/queue";
 
 export function findMangoSeller(): boolean {
     const queue = new Queue<string>();
-
+    const searched = new Set<string>();
     const start = mangoSellerGraph["you"];
     if (start) {
         queue.enqueue(start);
     }
 
+
     while (!queue.isEmpty) {
         const person = queue.dequeue();
-        if (person) {
+        if (person && !searched.has(person)) {
+            searched.add(person);
             if (personIsSeller(person)) {
                 console.log(`${person} is a mango seller!`);
                 return true;
-            } else {
-                const friends = mangoSellerGraph[person];
-                if (friends) {
-                    queue.enqueue(friends);
-                }
+            }
+            const friends = mangoSellerGraph[person];
+            if (friends) {
+                queue.enqueue(friends);
             }
         }
     }
-    console.log("No mango seller found.")
+    console.log("No mango seller found.");
     return false;
 }
 
