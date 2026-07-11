@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { walkDirBFS, walkDirDFS } from "../src/fileTree";
+import { DirectoryTree } from "../src/types";
 
-const utilWalk: Record<string, string[]> = {
+const utilWalk: DirectoryTree = {
     'util': [
         'util\\algorithms',
         'plotting.ts',
