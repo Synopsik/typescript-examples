@@ -1,7 +1,6 @@
 import { mangoSellerGraph } from "../data";
 import { Queue } from "../util/queue";
 
-
 export function findMangoSeller(): boolean {
     const queue = new Queue<string>();
     const searched = new Set<string>();
@@ -29,8 +28,10 @@ export function findMangoSeller(): boolean {
     return false;
 }
 
-
-
 function personIsSeller(person: string): boolean {
     return person.endsWith("m");
+}
+
+if (import.meta.main) {
+    findMangoSeller();
 }
