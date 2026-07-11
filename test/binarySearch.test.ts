@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { binarySearch } from "../src/algorithms/binarySearch";
+import { binarySearch } from "../util/algorithms/binarySearch";
 
 describe("binarySearch", () => {
     it("Finds an existing number", () => {

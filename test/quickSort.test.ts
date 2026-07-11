@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { quickSort } from "../src/algorithms/quickSort";
+import { quickSort } from "../util/algorithms/quickSort";
 
 describe("quickSort", () => {
     it("Numbered list is sorted properly", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { selectionSort } from "../src/algorithms/selectionSort";
+import { selectionSort } from "../util/algorithms/selectionSort";
 
 describe("selectionSort", () => {
     it("Numbered list is sorted properly", () => {

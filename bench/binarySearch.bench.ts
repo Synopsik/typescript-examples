@@ -1,5 +1,5 @@
 import { bench, describe } from "vitest";
-import { binarySearch } from "../src/algorithms/binarySearch";
+import { binarySearch } from "../util/algorithms/binarySearch";
 import { makeSimpleSortedArray } from "../util/sorted";
 
 describe("binarySearch", () => {
