@@ -34,7 +34,7 @@ export class Queue<T> {
         const item = this.items[this.head];
         this.head++;
 
-        // Compact occasionaly to avoid unboinded memory growth
+        // Compact occasionally to avoid unbounded memory growth
         if (this.head > 32 && this.head * 2 >= this.items.length) {
             this.items = this.items.slice(this.head);
             this.head = 0;
