@@ -56,7 +56,7 @@ export class Queue<T> {
 
     *[Symbol.iterator](): Iterator<T> {
         for (let i = this.head; i < this.items.length; i++) {
-            const item = this.items[1];
+            const item = this.items[i];
             if (item) {
                 yield item;
             }
