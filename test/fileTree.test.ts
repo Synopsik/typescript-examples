@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { walkDirBFS } from "../src/fileTree";
+import { walkDirBFS, walkDirDFS } from "../src/fileTree";
 
 const utilWalk: Record<string, string[]> = {
     'util': [
@@ -17,8 +17,12 @@ const utilWalk: Record<string, string[]> = {
 }
 
 describe('walkDir', () => {
-    it("Walk the util folder", () => {
+    it("Walk the util folder using BFS", () => {
         expect(walkDirBFS("util")).toStrictEqual(utilWalk);
+    })
+
+    it("Walk the util folder using DFS", () => {
+        expect(walkDirDFS("util")).toStrictEqual(utilWalk);
     })
 });
 
